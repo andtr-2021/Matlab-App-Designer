@@ -17,3 +17,4 @@ To plot a line graph:
 
 - h2 = animatedline(app.UIAxesOfRollAngle, 'Color', 'b', 'LineWidth', 2, 'MaximumNumPoints', Inf);
 - addpoints(h2, timeInSecond, data(2)); % roll
+
