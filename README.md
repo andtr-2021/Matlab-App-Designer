@@ -14,5 +14,6 @@ Then in the while loop, configure the readline funciton to read the data:
 - app.loadcellValue.Text = double2str(data(2)) // display the data on matlab's label
 
 To plot a line graph:
+
 - h2 = animatedline(app.UIAxesOfRollAngle, 'Color', 'b', 'LineWidth', 2, 'MaximumNumPoints', Inf);
-- 
+- addpoints(h2, timeInSecond, data(2)); % roll
