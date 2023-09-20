@@ -7,8 +7,11 @@ To set up the seriaml communitcatoin betwen the Matlab App and the microcontroll
 - flush(s); // clear the previous reading
 
 Then in the while loop, configure the readline funciton to read the data:
+
 - data = str2double(strsplit(s , ',')); // seperate the data by the deliminator - comma
 - data = data(1) // time 
 - data = data(2) // loadcell data
-
 - app.loadcellValue.Text = double2str(data(2)) // display the data on matlab's label
+
+To plot a line graph:
+- 
