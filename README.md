@@ -18,3 +18,6 @@ To plot a line graph:
 - h2 = animatedline(app.UIAxesOfRollAngle, 'Color', 'b', 'LineWidth', 2, 'MaximumNumPoints', Inf);
 - addpoints(h2, timeInSecond, data(2)); % roll
 
+To make a 3D rendering grah for the IMU orientation:
+- 1. Create a pop up window for the 3D graph: 
+
