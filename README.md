@@ -19,5 +19,7 @@ To plot a line graph:
 - addpoints(h2, timeInSecond, data(2)); % roll
 
 To make a 3D rendering grah for the IMU orientation:
-- 1. Create a pop up window for the 3D graph: 
+- 1. Create a pop up window for the 3D graph:
+ 
+- 2. Draw the 
 
