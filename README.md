@@ -19,8 +19,10 @@ To plot a line graph:
 - addpoints(h2, timeInSecond, data(2)); % roll
 
 To make a 3D rendering grah for the IMU orientation:
-- 1. Create a pop up window for the 3D graph:
- screen_property = get(0,'screensize');
+
+Create a pop up window for the 3D graph:
+```
+screen_property = get(0,'screensize');
 h = figure('outerposition', ...
     [0, screen_property(4)/2, ...
     screen_property(3)/2, screen_property(4)/2]);
@@ -57,4 +59,4 @@ zlabel('x','FontSize',16);
 xlim([-1,1]);
 ylim([-1,1]);
 zlim([-1,1]);
-
+```
