@@ -60,3 +60,41 @@ xlim([-1,1]);
 ylim([-1,1]);
 zlim([-1,1]);
 ```
+Input Roll and Pitch angle into the graph:
+```
+ if (time-time_start) >= 20
+
+        time_start = time;
+
+        th1 = 0;
+        th2 = data(2); % roll
+        th3 = data(3); % pitch
+       
+        R1 = [  cosd(th1), -sind(th1), 0;
+            sind(th1),  cosd(th1), 0;
+            0, 0, 1];
+        R2 = [  1, 0, 0;
+            0, cosd(th2), -sind(th2);
+            0, sind(th2),  cosd(th2)];
+        R3 = [  cosd(th3), 0, sind(th3);
+            0, 1, 0;
+            -sind(th3), 0, cosd(th3)];
+
+        e1_pr = R3*R2*R1*e1;
+        e2_pr = R3*R2*R1*e2;
+        e3_pr = R3*R2*R1*e3;
+        
+        set(p1, 'XData', [O(1), e1_pr(1)], ...
+            'YData', [O(2), e1_pr(2)], ...
+            'ZData', [O(3), e1_pr(3)])
+        set(p2, 'XData', [O(1), e2_pr(1)], ...
+            'YData', [O(2), e2_pr(2)], ...
+            'ZData', [O(3), e2_pr(3)])
+        set(p3, 'XData', [O(1), e3_pr(1)], ...
+            'YData', [O(2), e3_pr(2)], ...
+            'ZData', [O(3), e3_pr(3)])
+        set(p4, 'XData', [O(1), -e2_pr(1)], ...
+            'YData', [O(2), e2_pr(2)], ...
+            'ZData', [O(3), -e2_pr(3)])
+```
+
